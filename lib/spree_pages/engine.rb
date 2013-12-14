@@ -12,6 +12,8 @@ module SpreePages
       Dir.glob(File.join(File.dirname(__FILE__), "../app/overrides/**/*.rb")) do |c|
         Rails.application.config.cache_classes ? require(c) : load(c)
       end
+
+      require 'redcarpet'
     end
 
     config.to_prepare do

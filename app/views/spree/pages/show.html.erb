@@ -2,6 +2,6 @@
 <%- title = @page.title -%>
 <h1><%= title %></h1>
 
-<div id="page-body">
-  <%=raw @page.body %>
+<div id="page-body" class="page <%= sanitize_for_class(@page.title) %>">
+  <%= raw @page.rendered_body %>
 </div>
